@@ -1,3 +1,10 @@
 {
-    "editor.formatOnSave": true
+    "python.defaultInterpreterPath": ".venv/bin/python",
+    "python.terminal.activateEnvironment": true,
+    "editor.formatOnSave": true,
+    "python.envFile": "${workspaceFolder}/.env",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "python.analysis.typeCheckingMode": "off"
 }
