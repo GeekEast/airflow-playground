@@ -1,0 +1,11 @@
+DS_Store
+.env
+
+.venv/
+__pycache__/
+
+data/
+
+
+package-lock.json
+node_modules/

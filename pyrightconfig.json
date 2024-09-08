@@ -1,0 +1,11 @@
+{
+  "include": [
+    "dags"
+  ],
+  "exclude": [
+    "**/__pycache__"
+  ],
+  "ignore": [],
+  "reportMissingImports": true,
+  "reportMissingTypeStubs": false
+}

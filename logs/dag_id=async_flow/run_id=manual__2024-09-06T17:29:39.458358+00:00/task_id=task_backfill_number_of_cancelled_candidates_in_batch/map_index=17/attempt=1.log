@@ -1,0 +1,119 @@
+[2024-09-06T17:29:45.258+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-06T17:29:45.275+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: async_flow.task_backfill_number_of_cancelled_candidates_in_batch manual__2024-09-06T17:29:39.458358+00:00 map_index=17 [queued]>
+[2024-09-06T17:29:45.290+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: async_flow.task_backfill_number_of_cancelled_candidates_in_batch manual__2024-09-06T17:29:39.458358+00:00 map_index=17 [queued]>
+[2024-09-06T17:29:45.292+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-09-06T17:29:45.321+0000] {taskinstance.py:2888} INFO - Executing <Mapped(_PythonDecoratedOperator): task_backfill_number_of_cancelled_candidates_in_batch> on 2024-09-06 17:29:39.458358+00:00
+[2024-09-06T17:29:45.325+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=3230) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-06T17:29:45.327+0000] {standard_task_runner.py:72} INFO - Started process 3291 to run task
+[2024-09-06T17:29:45.328+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'async_flow', 'task_backfill_number_of_cancelled_candidates_in_batch', 'manual__2024-09-06T17:29:39.458358+00:00', '--job-id', '146', '--raw', '--subdir', 'DAGS_FOLDER/dags_async_flow.py', '--cfg-path', '/tmp/tmplnvnthyd', '--map-index', '17']
+[2024-09-06T17:29:45.331+0000] {standard_task_runner.py:105} INFO - Job 146: Subtask task_backfill_number_of_cancelled_candidates_in_batch
+[2024-09-06T17:29:45.416+0000] {task_command.py:467} INFO - Running <TaskInstance: async_flow.task_backfill_number_of_cancelled_candidates_in_batch manual__2024-09-06T17:29:39.458358+00:00 map_index=17 [running]> on host a3a5f1897683
+[2024-09-06T17:29:45.604+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='async_flow' AIRFLOW_CTX_TASK_ID='task_backfill_number_of_cancelled_candidates_in_batch' AIRFLOW_CTX_EXECUTION_DATE='2024-09-06T17:29:39.458358+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-06T17:29:39.458358+00:00'
+[2024-09-06T17:29:45.610+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-06T17:29:45.670+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e752a
+[2024-09-06T17:29:45.684+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e752c
+[2024-09-06T17:29:45.702+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e752e
+[2024-09-06T17:29:45.721+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7530
+[2024-09-06T17:29:45.733+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7532
+[2024-09-06T17:29:45.748+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7534
+[2024-09-06T17:29:45.780+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7536
+[2024-09-06T17:29:45.790+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7538
+[2024-09-06T17:29:45.797+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e753a
+[2024-09-06T17:29:45.811+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e753c
+[2024-09-06T17:29:45.824+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e753e
+[2024-09-06T17:29:45.840+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7540
+[2024-09-06T17:29:45.849+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7542
+[2024-09-06T17:29:45.860+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7544
+[2024-09-06T17:29:45.870+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7546
+[2024-09-06T17:29:45.881+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7548
+[2024-09-06T17:29:45.891+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e754a
+[2024-09-06T17:29:45.902+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e754c
+[2024-09-06T17:29:45.915+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e754e
+[2024-09-06T17:29:45.935+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7550
+[2024-09-06T17:29:45.947+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7552
+[2024-09-06T17:29:45.958+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7554
+[2024-09-06T17:29:45.965+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7556
+[2024-09-06T17:29:45.976+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7558
+[2024-09-06T17:29:45.989+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e755a
+[2024-09-06T17:29:45.997+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e755c
+[2024-09-06T17:29:46.006+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e755e
+[2024-09-06T17:29:46.026+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7560
+[2024-09-06T17:29:46.037+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7562
+[2024-09-06T17:29:46.047+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7564
+[2024-09-06T17:29:46.056+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7566
+[2024-09-06T17:29:46.067+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7568
+[2024-09-06T17:29:46.080+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e756a
+[2024-09-06T17:29:46.095+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e756c
+[2024-09-06T17:29:46.114+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e756e
+[2024-09-06T17:29:46.124+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7570
+[2024-09-06T17:29:46.134+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7572
+[2024-09-06T17:29:46.153+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7574
+[2024-09-06T17:29:46.167+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7576
+[2024-09-06T17:29:46.177+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7578
+[2024-09-06T17:29:46.183+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e757a
+[2024-09-06T17:29:46.192+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e757c
+[2024-09-06T17:29:46.201+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e757e
+[2024-09-06T17:29:46.208+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7580
+[2024-09-06T17:29:46.213+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7582
+[2024-09-06T17:29:46.223+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7584
+[2024-09-06T17:29:46.230+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7586
+[2024-09-06T17:29:46.243+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7588
+[2024-09-06T17:29:46.252+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e758a
+[2024-09-06T17:29:46.259+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e758c
+[2024-09-06T17:29:46.267+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e758e
+[2024-09-06T17:29:46.282+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7590
+[2024-09-06T17:29:46.289+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7592
+[2024-09-06T17:29:46.297+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7594
+[2024-09-06T17:29:46.303+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7596
+[2024-09-06T17:29:46.313+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e7598
+[2024-09-06T17:29:46.319+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e759a
+[2024-09-06T17:29:46.326+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e759c
+[2024-09-06T17:29:46.334+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e759e
+[2024-09-06T17:29:46.343+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75a0
+[2024-09-06T17:29:46.354+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75a2
+[2024-09-06T17:29:46.364+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75a4
+[2024-09-06T17:29:46.371+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75a6
+[2024-09-06T17:29:46.376+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75a8
+[2024-09-06T17:29:46.385+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75aa
+[2024-09-06T17:29:46.393+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75ac
+[2024-09-06T17:29:46.401+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75ae
+[2024-09-06T17:29:46.409+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75b0
+[2024-09-06T17:29:46.416+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75b2
+[2024-09-06T17:29:46.424+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75b4
+[2024-09-06T17:29:46.431+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75b6
+[2024-09-06T17:29:46.444+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75b8
+[2024-09-06T17:29:46.452+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75ba
+[2024-09-06T17:29:46.460+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75bc
+[2024-09-06T17:29:46.469+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75be
+[2024-09-06T17:29:46.479+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75c0
+[2024-09-06T17:29:46.486+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75c2
+[2024-09-06T17:29:46.493+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75c4
+[2024-09-06T17:29:46.502+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75c6
+[2024-09-06T17:29:46.509+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75c8
+[2024-09-06T17:29:46.517+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75ca
+[2024-09-06T17:29:46.525+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75cc
+[2024-09-06T17:29:46.532+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75ce
+[2024-09-06T17:29:46.540+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75d0
+[2024-09-06T17:29:46.547+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75d2
+[2024-09-06T17:29:46.556+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75d4
+[2024-09-06T17:29:46.563+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75d6
+[2024-09-06T17:29:46.570+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75d8
+[2024-09-06T17:29:46.582+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75da
+[2024-09-06T17:29:46.590+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75dc
+[2024-09-06T17:29:46.601+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75de
+[2024-09-06T17:29:46.615+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75e0
+[2024-09-06T17:29:46.622+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75e2
+[2024-09-06T17:29:46.631+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75e4
+[2024-09-06T17:29:46.640+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75e6
+[2024-09-06T17:29:46.648+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75e8
+[2024-09-06T17:29:46.657+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75ea
+[2024-09-06T17:29:46.666+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75ec
+[2024-09-06T17:29:46.674+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75ee
+[2024-09-06T17:29:46.689+0000] {core_li.py:23} INFO - Successfully updated job requisition 66db04abbf0a19d8769e75f0
+[2024-09-06T17:29:46.690+0000] {python.py:240} INFO - Done. Returned value was: 100
+[2024-09-06T17:29:46.720+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-06T17:29:46.721+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=async_flow, task_id=task_backfill_number_of_cancelled_candidates_in_batch, run_id=manual__2024-09-06T17:29:39.458358+00:00, map_index=17, execution_date=20240906T172939, start_date=20240906T172945, end_date=20240906T172946
+[2024-09-06T17:29:46.779+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-06T17:29:46.785+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
