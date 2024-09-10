@@ -18,7 +18,7 @@ def task_get_job_requisition_id_batches():
     ]
 
 
-@task(max_active_tis_per_dag=1)
+@task(max_active_tis_per_dag=50)
 def task_backfill_job_requisitions_with_number_of_cancelled_candidates(
     job_requisition_ids,
 ):
