@@ -5,8 +5,9 @@ from dags.etl_scripts.config import REGION_SHORT, STAGE
 from dags.etl_scripts.apis.core_li_job_requisition import (
     recalculate_job_requisition_status,
 )
-from dags.etl_scripts.get_job_requisition_id_batches import (
+from dags.etl_scripts.backfill_job_requisition_status import (
     get_job_requisition_id_batches,
+    validate_job_requisition_ids,
 )
 from utils.logger_util import logger
 
@@ -17,13 +18,14 @@ def task_get_job_requisition_id_batches():
     return get_job_requisition_id_batches({})
 
 
-@task(max_active_tis_per_dag=100)
+@task()
 def task_backfill_li_job_requisitions_status_in_batch(
     job_requisition_ids,
 ):
     try:
+        valid_job_requisition_ids = validate_job_requisition_ids(job_requisition_ids)
         # iterate through job_requisition_ids
-        for job_requisition_id in job_requisition_ids:
+        for job_requisition_id in valid_job_requisition_ids:
             recalculate_job_requisition_status(
                 job_requisition_id=job_requisition_id,
             )
@@ -58,6 +60,7 @@ def task_sum_and_success_exit(number_of_job_requisitions_backfilled_list):
     },
     description="A DAG for triggering backfill job requisition status",
     schedule=None,
+    max_active_tasks=50,
 )
 def dag_backfill_li_job_requisition_status_v2():
     number_of_job_requisitions_backfilled_list = (

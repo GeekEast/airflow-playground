@@ -27,8 +27,7 @@ PH_INTERNAL_SERVER_TO_SERVER_TOKEN = get_variable("PH_INTERNAL_SERVER_TO_SERVER_
 # core-li endpoint
 LI_CORE_GRAPHQL_ENDPOINT = f"https://ph-phapi-core-li-internal.{REGION}.{STAGE}.predictivehire.com/api/{REGION}/graphql"
 
-MONGO_APPS_V3_DBNAME = get_variable("MONGO_APPS_V3_DBNAME")
 MONGO_LI_V3_DBNAME = get_variable("MONGO_LI_V3_DBNAME")
 
 # database default query pagination size
-DEFAULT_QUERY_PAGINATION_SIZE = 100
+DEFAULT_QUERY_PAGINATION_SIZE = 200
