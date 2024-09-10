@@ -60,8 +60,7 @@ def task_sum_and_success_exit(number_of_job_requisitions_backfilled_list):
     },
     description="A DAG for triggering backfill job requisition status",
     schedule=None,
-    max_active_tasks=50,
-    max_active_runs=50,
+    max_active_tasks=10,
 )
 def dag_backfill_li_job_requisition_status():
     number_of_job_requisitions_backfilled_list = (
