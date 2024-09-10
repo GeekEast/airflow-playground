@@ -7,7 +7,9 @@ client = None
 
 
 def get_docdb_connection(db_name):
-    mongo_v3_host = get_variable("MONGO_V3_HOST")
+    region = get_variable("REGION")
+    stage = get_variable("STAGE")
+    mongo_v3_host = f"ph-docdb.{region}.{stage}.predictivehire.com:27017"
     mongo_v3_user = get_variable("MONGO_V3_USER")
     mongo_v3_pass = get_variable("MONGO_V3_PASS")
 
