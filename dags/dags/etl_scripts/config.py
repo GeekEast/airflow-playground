@@ -1,5 +1,5 @@
 from utils.variable_util import get_variable
-
+from airflow.operators.python import get_current_context
 
 STAGE = get_variable("STAGE")
 REGION = get_variable("REGION")
@@ -26,6 +26,14 @@ PH_INTERNAL_SERVER_TO_SERVER_TOKEN = get_variable("PH_INTERNAL_SERVER_TO_SERVER_
 
 # core-li endpoint
 LI_CORE_GRAPHQL_ENDPOINT = f"https://ph-phapi-core-li-internal.{REGION}.{STAGE}.predictivehire.com/api/{REGION}/graphql"
+
+
+def get_li_core_graphql_endpoint():
+    # get current context from airflow
+    ctx = get_current_context()
+    region = ctx["params"]["region"]
+    return f"https://ph-phapi-core-li-internal.{region}.{STAGE}.predictivehire.com/api/{region}/graphql"
+
 
 MONGO_LI_V3_DBNAME = get_variable("MONGO_LI_V3_DBNAME")
 

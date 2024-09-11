@@ -1,5 +1,4 @@
 DS_Store
-variables/
 
 .venv/
 __pycache__/
@@ -11,3 +10,7 @@ package-lock.json
 node_modules/
 
 logs/
+
+.env.qa
+.env.sandbox
+.env.product

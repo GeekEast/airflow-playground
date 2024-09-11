@@ -3,22 +3,18 @@ import requests
 from dags.utils.doc_db import get_docdb_connection
 from dags.etl_scripts.config import (
     DEFAULT_QUERY_PAGINATION_SIZE,
-    LI_CORE_GRAPHQL_ENDPOINT,
     MONGO_LI_V3_DBNAME,
     PH_INTERNAL_SERVER_TO_SERVER_TOKEN,
     PH_INTERNAL_SERVICE_SECRET,
+    get_li_core_graphql_endpoint,
 )
 from utils.logger_util import logger
 
 
 def get_job_requisitions_count(filter):
-    docdb_conn = None
-    li_db_name = MONGO_LI_V3_DBNAME
-
     try:
-        docdb_client, docdb_conn = get_docdb_connection(li_db_name)
+        docdb_client, docdb_conn = get_docdb_connection(MONGO_LI_V3_DBNAME)
         collection = docdb_conn["jobRequisitions"]
-
         job_requisitions_total = collection.count_documents(filter)
         return job_requisitions_total
     except Exception as e:
@@ -26,11 +22,9 @@ def get_job_requisitions_count(filter):
 
 
 def get_job_requisition_ids_with_pagination(filter, page_number):
-    docdb_conn = None
-    li_db_name = MONGO_LI_V3_DBNAME
 
     try:
-        docdb_client, docdb_conn = get_docdb_connection(li_db_name)
+        docdb_client, docdb_conn = get_docdb_connection(MONGO_LI_V3_DBNAME)
         collection = docdb_conn["jobRequisitions"]
 
         skip = page_number * DEFAULT_QUERY_PAGINATION_SIZE
@@ -56,8 +50,9 @@ def recalculate_job_requisition_status(job_requisition_id: str):
         }
     }
 
+    li_core_graphql_endpoint = get_li_core_graphql_endpoint()
     res = requests.post(
-        LI_CORE_GRAPHQL_ENDPOINT,
+        li_core_graphql_endpoint,
         json={"query": query, "variables": mutation_variables},
         headers={
             "authorization": f"Bearer {PH_INTERNAL_SERVER_TO_SERVER_TOKEN}",

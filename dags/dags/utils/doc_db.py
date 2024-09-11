@@ -1,27 +1,20 @@
-import pymongo
-
+from airflow.providers.mongo.hooks.mongo import MongoHook
+from airflow.operators.python import get_current_context
 from utils.variable_util import get_variable
-
-# reuse db client
-client = None
+from utils.logger_util import logger
 
 
 def get_docdb_connection(db_name):
-    region = get_variable("REGION")
+    # get context from airflow
+    ctx = get_current_context()
+    region = ctx["params"]["region"]
+
+    logger.info(f"Getting docdb connection for {db_name} in {region}")
+
     stage = get_variable("STAGE")
-    mongo_v3_host = f"ph-docdb.{region}.{stage}.predictivehire.com:27017"
-    mongo_v3_user = get_variable("MONGO_V3_USER")
-    mongo_v3_pass = get_variable("MONGO_V3_PASS")
+    mongo_conn_id = f"live-interview-{stage}-{region}"
+    hook = MongoHook(mongo_conn_id=mongo_conn_id)
+    client = hook.get_conn()
+    db = client[db_name]
 
-    global client
-    if client is None:
-        client = pymongo.MongoClient(
-            mongo_v3_host,
-            username=mongo_v3_user,
-            password=mongo_v3_pass,
-            authSource=db_name,
-            retryWrites=False,  # * very important to add retryWrites=False since DocumentDB doesn't support it.
-        )
-
-    conn = client[db_name]
-    return client, conn
+    return client, db

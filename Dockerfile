@@ -1,3 +1,3 @@
-FROM apache/airflow:${AIRFLOW_VERSION}-python3.10
+FROM apache/airflow:2.9.2-python3.10
 ADD requirements.txt .
-RUN pip install apache-airflow==${AIRFLOW_VERSION} -r requirements.txt
+RUN pip install -r requirements.txt
