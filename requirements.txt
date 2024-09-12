@@ -1,4 +1,4 @@
-pymongo==4.8.0
-pendulum==2.1.2
-apache-airflow-providers-mongo==4.2.0
+pymongo==4.7.3
+pendulum==3.0.0
+apache-airflow-providers-mongo==4.1.1
 dnspython==2.6.1

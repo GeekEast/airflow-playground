@@ -1,5 +1,8 @@
 ## Airflow
 
+### Restraints
+https://raw.githubusercontent.com/apache/airflow/constraints-2.9.2/constraints-3.10.txt
+
 ### Dependencies
 - python `brew install python@3.10`
 - install docker and docker compose
