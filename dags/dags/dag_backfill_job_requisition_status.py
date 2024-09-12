@@ -61,7 +61,7 @@ def task_sum_and_success_exit(number_of_job_requisitions_backfilled_list):
 )
 def dag_backfill_li_job_requisition_status():
     number_of_job_requisitions_backfilled_list = (
-        task_backfill_li_job_requisitions_status_in_batch.partial().expand(
+        task_backfill_li_job_requisitions_status_in_batch.expand(
             job_requisition_ids=task_get_job_requisition_id_batches(),
         )
     )
